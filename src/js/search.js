@@ -44,7 +44,6 @@ function onSearch(e) {
     imageApiService.fetchImages().then(images => {
       appendImageMarkup(images);
       loadMoreBtn.enable();
-      scrollPage();
       loadMoreBtn.enable();
       if (cards.length === 0) {
       loadMoreBtn.hide();
@@ -63,6 +62,8 @@ function clearContainer() {
 
 function onLoadMore() {
   fetchCards();
+  scrollPage();
+
 }
 
 
